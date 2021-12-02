@@ -1,0 +1,226 @@
+:root {
+    --appColor: rgb(221, 81, 81);
+    --black: rgba(207, 207, 207, .5);
+    --primary_div: linear-gradient(to bottom right,
+        rgba(88, 88, 88, 0.4),
+        rgba(255, 255, 255, 0.8)
+      );
+  }
+.home {
+  width: 100%;
+  height: 100%;
+  text-transform: capitalize;
+  max-width: 100vw;
+}
+.home_banner {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  background-image: linear-gradient(60deg, #ff8a9a, #ffdde1);
+
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border: none;
+  padding-bottom: 10rem;
+}
+.home_banner > * {
+  flex: 1 1 20rem;
+}
+
+.banner_text_section {
+  background-color: transparent;
+  height: auto;
+  font-size: clamp(1.5rem, 5vw, 13rem);
+  font-weight: bold;
+  text-align: left;
+  margin-left: 2.9rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(255, 238, 238);
+}
+.banner_text_special {
+  color: red;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.banner_img_section {
+  background-image: url("../../images/kisspng-neon-shapes-octagon-computer-icons-shape-5abbf11a1a0161.8596406615222663941065.png");
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 1rem;
+}
+.banner_text_info {
+  font-size: clamp(0.8rem, 1rem, 2rem);
+  color: rgb(85, 85, 85);
+  text-transform: capitalize;
+  padding-top: 1.5rem;
+
+  word-wrap: break-word;
+}
+.banner_text_upper_button {
+  font-weight: lighter;
+  font-size: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-bottom: 2.6rem;
+  margin-top: 1.6rem;
+  background-color: #ff8a9a;
+  margin-left: 0.5rem;
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  color: #2b0b0f;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.banner_text_buttonimg {
+  position: relative;
+  object-fit: contain;
+  width: 2rem;
+
+  object-fit: contain;
+  margin-right: 0.3rem;
+}
+.banner_img_reviews {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(59, 59, 59, 0.4),
+    rgba(226, 226, 226, 0.8)
+  );
+  backdrop-filter: blur(4px);
+  border-radius: 1.5rem;
+}
+.banner_img_reviews > .review_container {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 0.9rem;
+}
+.banner_img_reviewer {
+  height: 4rem;
+  width: 4rem;
+  margin-right: -1.2rem;
+
+  background-image: url("../../images/91a4961e-5d8c-4753-9bbc-3791dd324769.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 0.2rem solid white;
+}
+.banner_img_review_text {
+  margin-top: 0.5rem;
+  color: #000000;
+  font-weight: bold;
+}
+.banner_img_confirm_order {
+  display: flex;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(59, 59, 59, 0.4),
+    rgba(226, 226, 226, 0.8)
+  );
+  backdrop-filter: blur(4px);
+  border-radius: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3.2rem;
+  font-weight: bold;
+}
+.banner_img_confirm_order::before {
+  content: "\2713";
+  position: absolute;
+  padding: 0rem 0.4rem;
+  font-weight: bold;
+  left: 0.2rem;
+  font-size: 1.4rem;
+  color: green;
+  border: none;
+  border-radius: 50%;
+}
+.banner_img_satisfied_customers {
+  display: flex;
+  padding: 1rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(88, 88, 88, 0.4),
+    rgba(255, 255, 255, 0.8)
+  );
+  backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-right: 70%;
+  font-weight: bold;
+  color: rgb(24, 20, 214);
+}
+
+
+.deco_2 {
+  position: absolute;
+  object-fit: contain;
+  width: clamp(3rem, 15vw, 15rem);
+  right: 0%;
+  top: 69%;
+  transform: rotate(-30deg);
+}
+
+/*  Home services section  */
+.home_services {
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(247, 36, 36, 0.7),
+      rgba(255, 129, 129, 0)
+    ),
+    url("../../images/kisspng-ice-cube-fizzy-drinks-cocktail-ws-23-5b6f16bc5f65e4.0947468915340069723908.png");
+  height: 12rem;
+  background-position: center;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  border: none;
+  backdrop-filter: blur(4px);
+  padding-bottom: 1rem;
+  margin-top: -4rem;
+
+}
+.trending_orders
+{
+height: auto;
+max-height: 15rem;
+margin-top:2rem ;
+}
+.hot_topics
+{
+  font-weight: bolder;
+  display: flex;
+  justify-content: flex-start;
+  padding: .8rem;
+  margin-left: .4rem;
+  font-size: clamp(1rem,2.3vw,1.4rem);
+  background-image:linear-gradient(to right,rgb(26, 38, 206),red,purple);
+  color: transparent;
+  background-clip: text;
+}
+.reviews_wrapper{
+  width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}

@@ -1,0 +1,79 @@
+.account_page{
+    height: 100%;
+    min-height: 80vh;
+    background: rgb(202, 202, 202);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.account_banner{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: url('../../images/kisspng-ice-cream-milkshake-juice-milkshake-5abc90f0156aa7.4765195515223073120877.png');
+background-position: top;
+background-repeat: no-repeat;
+background-size: contain;
+background-attachment: fixed;
+    border-radius: 0 0 50% 50% ;
+}
+.account_avatar{
+    position: relative;
+    top: 1.3rem;
+    padding: .7rem !important;
+    background: tomato !important;
+}
+.account_controls_container,.my_orders{
+    width: 100%;
+    max-width: 500px;
+    margin-top: 2rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.account_controls_container>* {
+    width: 100%;
+    padding: .4rem;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgb(156, 156, 154);
+    text-align: left;
+    margin-left: 1.7rem;
+    display: flex;
+    
+}
+
+.account_controls_container button{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-weight: bolder;
+    text-align: left;
+
+}
+
+.account_controls_container>*:hover{
+    background-color: aliceblue;
+}
+
+.account_link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout_button>*,.account_link>*{
+    margin: .2rem;
+}

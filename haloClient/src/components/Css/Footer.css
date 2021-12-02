@@ -1,0 +1,70 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  background: gray;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+
+  box-shadow: 0.1rem 0.1rem 1rem rgb(151, 151, 151);
+  animation: animate 5s linear infinite alternate;
+}
+
+.footer_text_section {
+  display: flex;
+}
+.quick_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.3rem;
+  text-align: left;
+  margin-right:2rem;
+
+}
+.quck_link_text{
+  padding: .2rem;
+}
+
+.quck_link_text:hover{
+  color:white;
+text-shadow: .1rem .1rem 1rem whitesmoke;
+
+}
+.footer_contact:hover{
+color: white;
+text-shadow: .1rem .1rem 1rem whitesmoke;
+
+}
+
+.footer_contacts{
+    display: flex;
+    flex-direction: column;
+}
+.footer_contact{
+    margin: .2rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding:.2rem;
+}
+.footer_findus_section{
+  display: flex;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: .1rem solid rgb(75, 74, 74);
+}
+
+
+
+
+
+
+
+
+

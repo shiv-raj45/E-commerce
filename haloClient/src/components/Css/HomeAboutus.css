@@ -1,0 +1,30 @@
+.aboutus
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 .5 5rem;
+}
+
+
+.home_aboutus
+{position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image:var(--primary_div) ;
+    border-radius: 1rem;
+    padding: .3rem;
+    margin: .4rem;
+    font-weight: lighter;
+    box-shadow: .1rem .1rem .1rem rgba(245, 245, 245,.1),-.1rem -.1rem .1rem rgba(59, 58, 58,.1);
+    height: 5rem;
+    backdrop-filter: blur(6px);
+    color: rgba(0, 0, 0, 0.877);
+}
+.home_aboutus>*
+{
+    padding: .2rem;
+
+}

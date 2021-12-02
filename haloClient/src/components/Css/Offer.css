@@ -1,0 +1,148 @@
+:root {
+  --appColor: rgb(221, 81, 81);
+  --black: rgba(207, 207, 207, 0.5);
+  --primary_div: linear-gradient(
+    to bottom right,
+    rgba(59, 59, 59, 0.4),
+    rgba(226, 226, 226, 0.8)
+  );
+}
+
+.offer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+  background-image: linear-gradient(
+    to bottom left,
+    rgba(181, 57, 197, 0.4),
+    transparent
+  );
+
+cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
+  height: 100%;
+  margin-top: 2rem;
+  min-height: 35rem;
+}
+
+.offer_title {
+  font-size: clamp(2rem, 3vw, 3rem);
+  padding: 2rem 2rem;
+  word-wrap: break-word;
+  font-weight: bold;
+  color: rgb(83, 83, 83);
+  background: linear-gradient(
+    to bottom left,
+    rgba(235, 23, 68, 0.5),
+    transparent
+  );
+  text-align: center;
+  border-radius: 50%;
+  backdrop-filter: blur(15px);
+  z-index: 100;
+  margin-bottom: 3rem;
+margin-left: 2rem;
+}
+.offer_title::after,
+.offer_title::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background: linear-gradient(pink,transparent);
+    z-index: -100000;
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+}
+.offer_title::before
+
+{
+    top: 50%;
+    left: 50%;
+    background: linear-gradient(transparent,pink);
+
+}
+.offer_card_container
+{
+
+height: fit-content;
+padding: 1rem;
+width: clamp(15rem,20vw,37rem);
+margin-left: 2rem;
+background-image: linear-gradient(transparent,rgba(68, 68, 68,.4));
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+transition: all .6s;
+
+
+}
+
+
+.offer_card_container:hover{
+  transform: translateY(-12px);
+}
+
+.offer_card_img
+{
+    width: 100%;
+    object-fit: contain;
+}
+.offer_card_container .offer_product_name
+{
+    font-weight: bold;
+    font-size: clamp(2rem,2vw,3rem);
+    padding-bottom: 1rem;
+}
+.offer_product_info
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(1rem,1vw,2rem);
+
+
+  }
+  .offer_cart{
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(231, 122, 122);
+    box-shadow: .7rem .7rem 2.3rem rgba(255, 0, 0,.4),-.7rem -.7rem 2.2rem rgb(255, 0, 0,.4);
+align-items: center;  
+margin-top: 1rem;
+border-radius: 1rem;
+padding: .2rem;  
+    font-weight: bold;
+    transition: all .4s;
+  }
+  .offer_cart:hover{
+    background-color: rgba(127, 255, 212,.5);
+    box-shadow: .7rem .7rem 2.3rem rgba(127, 255, 212,.5),-.7rem -.7rem 2.2rem rgba(127, 255, 212,.5);
+
+  }
+  .offer_cart_icon
+  {
+    color: rgb(0, 0, 0) !important;
+    padding: .2rem;
+  }
+
+.offer_product_price
+{
+margin-right: 1.5rem;
+font-size: clamp(1rem,1vw,2rem);
+font-weight: bold;
+}
+.offer_product_rating
+{
+  color: rgb(233, 39, 39) !important;
+}
+.offer_product_link{
+  color: black !important;
+  text-decoration: none;
+}

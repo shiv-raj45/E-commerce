@@ -1,0 +1,115 @@
+.signup{
+
+height: 100%;
+min-height: 90vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+background:url('../../images/kisspng-submarine-sandwich-hamburger-cheeseburger-fajita-s-sandwich-5abbc5da0c1d91.7420584915222553220496.png'),tomato;
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+}
+.form
+{
+position: relative;
+background:linear-gradient(to top left,rgba(155, 155, 155,.4),rgba(235, 99, 99, 0.8));
+
+    display: flex;
+flex-direction: column;
+width: clamp(18rem,25vw,35rem);
+padding: .5rem;
+justify-content: center;
+align-items: center;
+text-align: left;
+padding: 1.5rem;
+border-radius: .5rem;
+backdrop-filter: blur(15px);
+}
+label{
+width: 100%;
+margin-left: .2rem;
+text-transform: capitalize;
+padding: .2rem;
+font-size: 1.1rem;
+}
+.signupinput
+{
+    margin-top: .3rem;
+width: 100%;
+    height: 1.9rem;
+    outline: none;
+    border: none;
+    background: rgba(182, 182, 182, 0.5);
+padding: 0rem .4rem;
+}
+
+.signupinput:current
+{
+    margin-top: .3rem;
+width: 100%;
+    height: 1.9rem;
+    outline: none;
+    border: none;
+    background: rgba(182, 182, 182, 0.5);
+
+}
+
+.signupbutton{
+    height: 2.5rem;
+    width: 100%;
+    margin-top: 1.2rem;
+    outline: none;
+    border: none;
+    background: rgba(87, 255, 9, 0.5);
+}
+.signupbutton:hover{
+    background: rgb(131, 66, 216);
+    transition: .4s;
+}
+.error
+{margin-bottom: 2rem;
+    background: rgba(201, 233, 22, 0.836);
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+padding: .7rem;
+text-transform: capitalize;
+font-size: 1.1rem;
+font-weight: bold;
+color: rgb(255, 88, 88);
+backdrop-filter: blur(40px);
+animation: fade .4s linear;
+
+}
+@keyframes fade{
+    from{
+opacity: 0;
+    }
+    to{
+opacity: 1;
+    }
+}
+.login_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+.login_wrapper button{
+    height: 2.5rem;
+    width: 100%;
+    margin-top: 1.2rem;
+    outline: none;
+    border: none;
+    background: tomato;
+}
+.login_wrapper button:hover{
+    background: wheat;
+}

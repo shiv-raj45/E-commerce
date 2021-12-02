@@ -1,0 +1,1 @@
+export const basURL="http://localhost:2000"

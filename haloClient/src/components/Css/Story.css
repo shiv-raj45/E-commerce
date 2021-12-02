@@ -1,0 +1,39 @@
+.story {
+  display: flex;
+  justify-content: flex-start;
+background-image: url('../../images//vegetables-set-left-black-slate.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+text-align: left;
+height: 100%;
+min-height: 15rem;
+
+}
+.story_text
+{
+  width: 45%;
+  margin-left: 2vw;
+  color: rgba(238, 225, 42, 0.911);
+padding: 3rem;
+}
+.story_title{
+  color: rgb(9, 230, 94);
+  font-weight: bolder;
+  margin-bottom: 1.2rem;
+border-style: solid;
+  font-size: clamp(2rem,2vw,3rem);
+  padding: 1rem 2rem;
+border-image: linear-gradient(45deg,rgb(219, 112, 112),transparent) 1;
+}
+
+
+.story_text >p{
+  margin-top: 2rem;
+}
+ 
+ @media screen and (max-width:600px) {
+   .story_text {
+    width: 100%;
+  }
+  
+}

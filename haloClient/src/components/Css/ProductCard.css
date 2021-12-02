@@ -1,0 +1,118 @@
+.product_row
+{
+    background-color: rgba(247, 222, 114, 0.7);
+    display: flex;
+    overflow-x: auto;
+height:auto;
+min-height: 10rem;
+justify-content: flex-start;
+align-items: center;
+scrollbar-width: thin;
+}
+
+.product_row::-webkit-scrollbar {
+    width: 2px;
+    height: 4px;
+  }
+  .product_row::-webkit-scrollbar-thumb {
+    background-color: var(--appColor);
+    width: 2px;
+    height: 0px;
+  }
+  .product_row::-webkit-scrollbar-track {
+    background-color: 7;
+    
+  }
+  
+
+.product_container
+{
+    display: flex;
+    flex-direction: column;
+    width: clamp(10rem,10vw,11rem);
+height:clamp(14rem,17vw,15rem);
+    background-image: linear-gradient(transparent,pink);
+    padding: 1rem;
+    margin: .7rem;
+    border-radius: .5rem;
+    align-items: flex-start;
+    transition: all .4s;
+
+    
+
+}
+.product_container:hover{
+    transform: scale(1.04);
+
+}
+
+.product_img
+{
+    width: 90%;
+object-fit: contain;
+filter: drop-shadow(1px 1px 1px  rgb(240, 96, 13));
+}
+.product_info
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.product_info_text
+{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-left: .4rem;
+}
+
+.add_to_cart_button
+{
+    width: clamp(4rem,2vw,5rem);
+    position: relative;
+bottom: .3rem;
+    right:-1rem;
+    border: none;
+    border-radius: .5rem;
+    padding: .2rem;
+    background-image: linear-gradient(145deg,transparent,rgba(255, 192, 203,.7));
+    backdrop-filter: blur(4px);
+    color: rgb(58, 57, 57);
+    transition: all .3s;
+    }
+
+
+.add_to_cart_button:hover{
+    background-color: aquamarine;
+}
+
+.product_info_name{
+    font-size: .7rem;
+    font-weight:bold;
+    margin-bottom: .7rem;
+    text-overflow: clip;
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    
+
+}
+.product_link
+{
+    color:rgb(0, 0, 0) !important; 
+    text-decoration: none;
+}
+.product_info_price
+{font-size: 1rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right,rgb(0, 0, 0),rgb(17, 0, 255));
+    background-clip: text;
+    color: transparent;
+    margin-bottom: .6rem;
+}
+.product_info_rating{
+    color: rgb(255, 25, 25);
+
+}

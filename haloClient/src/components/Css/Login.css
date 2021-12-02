@@ -1,0 +1,126 @@
+.login{
+    height: 100%;
+    min-height: 80vh;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: url('../../images/kisspng-cherry-tomato-lecsxf3-cultivar-auglis-fruit-fresh-tomatoes-5a8fd985ef5338.7956302015193767739803.png'),pink;
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+}
+.loginForm
+{
+    position: relative;
+background:linear-gradient(to top left,rgba(155, 155, 155,.4),rgba(145, 145, 145, 0.8));
+backdrop-filter: blur(4px);
+
+    display: flex;
+flex-direction: column;
+width: clamp(18rem,25vw,35rem);
+padding: .5rem;
+justify-content: center;
+align-items: center;
+text-align: left;
+padding: 1.5rem;
+border-radius: .5rem;
+}
+
+label{
+    width: 100%;
+margin-left: .2rem;
+text-transform: capitalize;
+padding: .2rem;
+font-size: 1.1rem;
+}
+
+.loginInput
+{
+    margin-top: .3rem;
+width: 100%;
+    height: 2.1rem;
+    outline: none;
+    border: none;
+    background: rgba(255, 14, 14, 0.5);
+padding: 0rem .4rem;
+}
+.loginSubmit
+{
+    height: 2.5rem;
+    width: 100%;
+    margin-top: 1.2rem;
+    outline: none;
+    border: none;
+    background: rgba(87, 255, 9, 0.5);
+}
+.loginSubmit:hover{
+
+    background: rgb(94, 25, 255);
+    transition: .4s;
+}
+
+.login_error{
+    margin-bottom: 2rem;
+    background: rgba(0, 156, 60, 0.836);
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+padding: .7rem;
+text-transform: capitalize;
+font-size: 1.1rem;
+font-weight: bold;
+color: rgb(255, 88, 88);
+backdrop-filter: blur(4px);
+animation: fade .4s linear;
+
+}
+@keyframes fade{
+    from{
+opacity: 0;
+    }
+    to{
+opacity: 1;
+    }
+}
+.login_error>*{
+    margin: .4rem 1rem;
+}
+.login_title{
+    margin-bottom: 2rem;
+    background: rgba(131, 131, 131,.6);
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+padding: .7rem;
+text-transform: capitalize;
+font-size: 1.1rem;
+font-weight: bold;
+color: rgb(129, 44, 226);
+backdrop-filter: blur(4px);
+
+}
+.signin_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+.signin_wrapper button{
+    height: 2.5rem;
+    width: 100%;
+    margin-top: 1.2rem;
+    outline: none;
+    border: none;
+    background: tomato;
+}
+.signin_wrapper button:hover{
+    background: wheat;
+    transition: .3s;
+}

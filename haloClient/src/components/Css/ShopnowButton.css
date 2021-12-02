@@ -1,0 +1,9 @@
+.continue_shopping{
+    padding: .5rem;
+    color: rgb(110, 8, 226);
+    font-weight: bold;
+    background: rgb(65, 243, 21);
+    box-shadow: .7rem .7rem 2.3rem rgba(127, 255, 212,.5),-.7rem -.7rem 2.2rem rgba(127, 255, 212,.5);
+
+ cursor: pointer;   
+}

@@ -1,0 +1,11 @@
+.empty_cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.empty_cart_icon{
+    color: red;
+    font-size: clamp(3rem,5vw,4rem) !important;
+}
