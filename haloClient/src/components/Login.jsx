@@ -1,9 +1,10 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import {useHistory} from 'react-router-dom'
 import './Css/Login.css'
 import { ProductState } from '../Context/Context'
 import { InfoRounded } from '@material-ui/icons'
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min'
 function Login() {
     const [formerror, setFormerror] = useState("")
 const [data, setdata] = useState({
@@ -11,7 +12,9 @@ const [data, setdata] = useState({
     password:''
 });
 const history=useHistory()
-const {dispatch}=ProductState()
+const {state,dispatch}=ProductState();
+useEffect(()=>{
+if(state.id)<Redirect to="/"/>},[])
 const validate=(data)=>{
 let errors=""
     if(!data.email || !data.password){errors="fill the complete form"}

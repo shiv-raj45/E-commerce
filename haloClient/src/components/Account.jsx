@@ -1,16 +1,29 @@
 import { Avatar } from '@material-ui/core';
 import { Keyboard, KeyboardOutlined, LockOpen } from '@material-ui/icons';
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ProductState } from '../Context/Context';
+import SingleItem from './SingleItem'
 import './Css/Account.css'
 function Account() {
 const {state,dispatch}=ProductState()
+const [orders, setOrders] = useState([])
 
     const logOut = () => {
   localStorage.removeItem("accessToken");
    dispatch({ type: "LOGOUT", payload: {auth:false} });
       };
+
+useEffect(()=>{
+const fetchOrders= async()=>{
+ const {data}= await axios.get(`http://localhost:2000/getorders/:${state.id}`)
+setOrders(data)
+
+}
+fetchOrders()
+},[state.id])
+
 
     return (
         <div className="account_page"> 
@@ -22,9 +35,9 @@ const {state,dispatch}=ProductState()
          </Link></span>
          </div>
 <div className="my_orders">
-
-
+<SingleItem product={orders}/>
 </div>
+
         </div>
     )
 }

@@ -5,7 +5,7 @@ const postOrders=router.post("/",(req,res)=>{
 
 const {productdetails, userId}=req.body;
 if(!userId || userId==undefined)return res.send("you must login first");
-const orderDate=new Date().toISOString().slice(0,10)
+const orderDate=new Date().toDateString()
 const allProducts=productdetails.map(product=>{
   return [product.productName,product.rating,product.price,orderDate, userId]
 });
