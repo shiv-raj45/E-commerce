@@ -29,7 +29,6 @@ function Cart() {
   const expense = total(cart);
   const [animateNumber, setAnimateNumber] = useState(-1);
   const [animate, setAnimate] = useState(false);
-
   const checkOut = () => {
     const credentials = cart.map((product) => {
       return {
@@ -37,9 +36,10 @@ function Cart() {
         price: product.price,
         rating: product.rating,
         userId: id,
+        productId:product.id
       };
     });
-    console.log(credentials);
+
     axios
       .post("http://localhost:2000/postorders", {
         productdetails: credentials,
@@ -49,6 +49,12 @@ function Cart() {
         setShowToast(true);
         console.log(response.data);
         setCheckoutSuccess(response.data.successful);
+
+if(response.data.successful===true){
+  dispatch({type:"REMOVE_ALL"})
+setCheckoutSuccess(true)
+}
+
       });
 
     localStorage.getItem("accessToken")
@@ -58,7 +64,7 @@ function Cart() {
   return (
     <div className="cart">
       <ShopNowButton text={"Continue Shopping"} />
-    {cart.length>1 ? <div className="cart_site_info">
+    {cart.length>0 ? <div className="cart_site_info">
         <span className="cart_subtotal"> Subtotal:Rs.{expense} </span>
         <button className="cart_checkout" onClick={checkOut}>Checkout </button>
       </div>:''}
@@ -110,7 +116,7 @@ function Cart() {
           </div>
         ))}
       </div>
-
+{checkoutSuccess && <div className="checkout_message">Checkout successful </div>}
       {cart.length === 0 && <EmptyCart />}
     </div>
   );

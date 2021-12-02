@@ -17,8 +17,9 @@ const [orders, setOrders] = useState([])
 
 useEffect(()=>{
 const fetchOrders= async()=>{
- const {data}= await axios.get(`http://localhost:2000/getorders/:${state.id}`)
-setOrders(data)
+ const {data}= await axios.get(`http://localhost:2000/getorders/${state.id}`)
+setOrders(data.map((el)=>{return {
+  product:el.productName,rating:el.rating,price:el.price,orderDate:el.orderDate.slice(0,10),quantity:1,id:el.productId}}))
 
 }
 fetchOrders()
@@ -34,8 +35,9 @@ fetchOrders()
             <button onClick={logOut} className="logout_button"><LockOpen/> logout</button>
          </Link></span>
          </div>
+         <span className="order_title">  My orders</span>
 <div className="my_orders">
-<SingleItem product={orders}/>
+{orders.map((product)=><div className="orders_wrapper"> <span className="order_date">order date: {product.orderDate} </span> <SingleItem product={product}/> </div> )}
 </div>
 
         </div>

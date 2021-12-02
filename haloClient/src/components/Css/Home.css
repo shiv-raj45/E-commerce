@@ -178,10 +178,7 @@
 .home_services {
   position: relative;
   width: 100%;
-  background-image: linear-gradient(
-      rgba(247, 36, 36, 0.7),
-      rgba(255, 129, 129, 0)
-    ),
+  background-image:
     url("../../images/kisspng-ice-cube-fizzy-drinks-cocktail-ws-23-5b6f16bc5f65e4.0947468915340069723908.png");
   height: 12rem;
   background-position: center;
