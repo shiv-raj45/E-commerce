@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Search from "./Search";
 import SingleItem from "./SingleItem";
@@ -86,12 +86,12 @@ function Searchpage() {
           <div className="search_result">
             <div className="filter_container">
               <div className="products_number">
-                {" "}
+                
                 {filteredProduct.length} Results for "
-                <b> {keyword || searchSuggest[clickSuggest]}</b>"{" "}
+                <b> {keyword || searchSuggest[clickSuggest]}</b>"
               </div>
               <div className="price_filter_buttons">
-                {" "}
+                
                 <button
                   className="filter_button"
                   onClick={() =>

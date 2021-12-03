@@ -13,11 +13,6 @@ export const productReducer = (state, { type, payload }) => {
   switch (type) {
 
 
-case "LOAD_PRODUCTS":
-  return {...state,products:payload}
-
-
-
     case "ADD":
       const inTheCart = state.cart.find((el) => el.id === payload.id);
       if (inTheCart) {
@@ -74,21 +69,6 @@ case "LOAD_PRODUCTS":
         }),
       };
 
-    case "DSC_TO_ASC":
-      return {
-        ...state,
-        products: [
-          ...state.products.sort((a, b) => (a.price > b.price ? 1 : -1)),
-        ],
-      };
-
-    case "ASC_TO_DSC":
-      return {
-        ...state,
-        products: [
-          ...state.products.sort((a, b) => (a.price > b.price ? -1 : 1)),
-        ],
-      };
     case "SEARCH":
       if (!payload) {
         return { ...state, filteredProduct:[] };

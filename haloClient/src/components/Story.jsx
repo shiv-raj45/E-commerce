@@ -1,6 +1,5 @@
 import React from "react";
 import "./Css/Story.css";
-import storyImg from "../images/5a22fe7bc722d8.6057829915122428118157.png";
 function Story() {
   return (
     <div className="story">

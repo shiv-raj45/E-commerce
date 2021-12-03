@@ -1,13 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import {
-  useLocation,
+  
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import { ProductState } from "../Context/Context";
 import Feedback from "./Feedback";
 import Rating from "./Rating";
-import Spinner from "./Spinner";
 import WishlistButton from "./WishlistButton";
 import "./Css/ProductDetails.css";
 import ProductImage from "../images/kisspng-fanta-fizzy-drinks-diet-coke-coca-cola-juice-fanta-5ac6931aeaac34.5705116715229632269612.png";
@@ -19,22 +18,17 @@ function ProductDetails() {
   const { state, dispatch } = ProductState();
   const { id } = useParams();
 
-  const [loading, setLoading] = useState(null);
   const [details, setDetails] = useState([]);
-  const [wishlitStatus, setWishlitStatus] = useState("");
+  const [ setWishlitStatus] = useState("");
   const [recommended, setRecommended] = useState([]);
   const [clientFeedback, setClientFeedback] = useState([]);
   useEffect(() => {
-    setLoading(true);
     const fetchDetails = () => {
       axios
         .post(`http://localhost:2000/details/${id}`, { userId: state.id })
         .then((response) => {
-          console.log(response.data);
           setDetails(response.data.productDetails);
-          console.log(response.data.wishListStatus);
           setWishlitStatus(response.data.wishListStatus.added);
-          console.log(response.data.feedbacks);
           setClientFeedback(response.data.feedbacks);
           const filteredrecommend = response.data.recommended.filter(
             (el) => el.id !== Number(id)
@@ -43,11 +37,10 @@ function ProductDetails() {
         })
         .catch((error) => console.log(error))
         .finally(() => {
-          setLoading(false);
         });
     };
     if (id) fetchDetails();
-  }, [id, state.id]);
+  }, [id, state.id,setWishlitStatus]);
 
   const deleteFeedBack = (feedbackId, productId, index) => {
     axios

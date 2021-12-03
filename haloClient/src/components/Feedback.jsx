@@ -6,7 +6,6 @@ import './Css/Feedback.css'
 function Feedback({ userId, productId, setClientFeedback, clientFeedback }) {
   const { state } = ProductState();
   const [feedbackText, setFeedbackText] = useState("");
-  const [serverResponse, setServerResponse] = useState("");
   const [rating, setRating] = useState(0);
   const sendFeedback = (e) => {
     e.preventDefault();
@@ -22,7 +21,6 @@ function Feedback({ userId, productId, setClientFeedback, clientFeedback }) {
     axios
       .post("http://localhost:2000/feedback", feedback)
       .then((response) => {
-        setServerResponse(response.data);
       })
       .finally(() => {
         setFeedbackText("");

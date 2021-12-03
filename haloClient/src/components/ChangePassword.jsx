@@ -1,10 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { ProductState } from "../Context/Context";
 import './Css/ChangePassword.css'
 function Profile() {
-  const {accountControls}=useParams()
  const {state}= ProductState()
   const [data, setData] = useState({password:"",newPassword:""});
 const [response, setResponse] = useState({})

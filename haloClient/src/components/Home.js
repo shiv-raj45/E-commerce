@@ -1,14 +1,11 @@
 import { ProductState } from "../Context/Context";
-import { totalProduct } from "../Context/reducer";
 import ProductCard from "./ProductCard";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Category from "./Category";
 
 import "./Css/Home.css";
 import buttonImg from "../images/delivery-vector-graphics-computer-icons-clip-art-illustration-delivery-man-bd38cd1945ea8a2acb0e34ff1d63b1a8.png";
-import deco2 from "../images/kisspng-mojito-cocktail-rum-daiquiri-bodeguita-del-medio-mojito-png-pic-5a75271a4ed9f8.525485681517627162323.png";
 import HomeAboutus from "./HomeAboutus";
 import Story from "./Story.jsx";
 import { AccessAlarm, AddIcCall, Email } from "@material-ui/icons";
@@ -18,10 +15,7 @@ import Spinner from "./Spinner";
 function Home() {
   const [availableProduct, setAvailableProduct] = useState([]);
   const [loading, setLoading] = useState("");
-  const {
-    state: { cart, filteredProduct, id },
-    dispatch,
-  } = ProductState();
+  const {dispatch} = ProductState();
 
   useEffect(() => {
     setLoading(true);
@@ -41,7 +35,7 @@ function Home() {
     };
 
     getproducts();
-  }, []);
+  }, [availableProduct,dispatch]);
 
   return (
     <div className="home">

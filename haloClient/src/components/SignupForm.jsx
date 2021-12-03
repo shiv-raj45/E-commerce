@@ -6,7 +6,6 @@ function SignupForm() {
   const  history=useHistory()
   const [errors, setErrors] = useState();
   const [response,setResponse] = useState({});
-  const [validated] = useState(false);
   const [userInfo, setuserInfo] = useState({
     firstName: "",
     lastName: "",

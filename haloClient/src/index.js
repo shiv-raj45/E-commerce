@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./components/Css/Login.css";
 import App from "./App";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router } from "react-router-dom";
 import { Context } from "./Context/Context.js";
 

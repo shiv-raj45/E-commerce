@@ -14,7 +14,7 @@ const rawReviews = [
   },
   {
     img:reviewImg,
-        review: `Excellent food sevice and The best in overall Nepal>Can't express my thanks with my words`,
+        review: `Excellent food sevice and The best in overall Nepal.Can't express my thanks with my words`,
   },
 ];
 function Reviews() {

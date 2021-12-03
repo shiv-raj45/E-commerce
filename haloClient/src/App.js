@@ -1,8 +1,8 @@
-import React, { useEffect ,lazy, Suspense} from "react";
+import React, { useEffect ,lazy} from "react";
 import { Route, Switch,Redirect } from "react-router-dom";
 import axios from "axios";
 import { ProductState } from "./Context/Context";
-import "./App.css";
+import "./components/Css/App.css";
 import Suspenser from "./components/Suspenser";
 const Login=lazy(()=>import ("./components/Login"));
 const Header=lazy(()=>import ('./components/Header') )

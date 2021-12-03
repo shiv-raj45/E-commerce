@@ -14,7 +14,7 @@ const [data, setdata] = useState({
 const history=useHistory()
 const {state,dispatch}=ProductState();
 useEffect(()=>{
-if(state.id)<Redirect to="/"/>},[])
+if(state.id)<Redirect to="/"/>},[state.id])
 const validate=(data)=>{
 let errors=""
     if(!data.email || !data.password){errors="fill the complete form"}
