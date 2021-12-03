@@ -62,7 +62,6 @@ padding: 0rem .4rem;
 
 .login_error{
     margin-bottom: 2rem;
-    background: rgba(0, 156, 60, 0.836);
     width: 100%;
     max-width: 30rem;
     display: flex;
@@ -73,7 +72,6 @@ text-transform: capitalize;
 font-size: 1.1rem;
 font-weight: bold;
 color: rgb(255, 88, 88);
-backdrop-filter: blur(4px);
 animation: fade .4s linear;
 
 }
@@ -90,7 +88,6 @@ opacity: 1;
 }
 .login_title{
     margin-bottom: 2rem;
-    background: rgba(131, 131, 131,.6);
     width: 100%;
     max-width: 30rem;
     display: flex;

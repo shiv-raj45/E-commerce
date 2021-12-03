@@ -57,9 +57,10 @@ history.push("/home")
     return (
         <div className="login">
            <span className="login_title"> Login!!!</span>
-            {formerror && <>  <span  className="login_error" > <InfoRounded className="error_info"/> {formerror}</span></>}
 
             <form onSubmit={handleSubmit} className="loginForm">
+            {formerror && <>  <span  className="login_error" > <InfoRounded className="error_info"/> {formerror}</span></>}
+
 
             <label htmlFor="email">email</label>
 
@@ -83,7 +84,7 @@ id="email"
 
 <div className="signin_wrapper">Don't have an account?
 
-<button className="signin_button" onClick={()=>history.push('/signup')}>Sign In</button>
+<button className="signin_button" onClick={()=>history.push('/signup')}>Sign up</button>
 
 </div>
             </form>

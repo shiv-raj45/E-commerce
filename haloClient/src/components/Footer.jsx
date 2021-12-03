@@ -26,7 +26,7 @@ function Footer() {
            <div className="footer_findus_section">
 
 
-           <span className="footer_contact">facebook</span>  
+           <span className="footer_contact">  facebook</span>  
    <span className="footer_contact"> Instagram</span>  
    <span className="footer_contact"> youTube</span>  
    <span className="footer_contact">Twitter</span>  

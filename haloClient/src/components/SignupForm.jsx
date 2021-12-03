@@ -65,13 +65,14 @@ function SignupForm() {
 
   return (
     <div className="signup">
-      {errors ? <div className="error">{errors}</div> : ''}
-      {response.success===0 && <span className="error">  {response.message}</span>}
  
       <form
         className="form"
         onSubmit={submitForm}
       >
+      {errors ? <div className="error">{errors}</div> : ''}
+      {response.success===0 && <span className="error">  {response.message}</span>}
+
         <label>firstName</label>
 
         <input

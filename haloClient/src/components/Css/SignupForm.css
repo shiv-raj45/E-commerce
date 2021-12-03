@@ -19,7 +19,7 @@ background:linear-gradient(to top left,rgba(155, 155, 155,.4),rgba(235, 99, 99, 
 
     display: flex;
 flex-direction: column;
-width: clamp(18rem,25vw,35rem);
+width: clamp(22rem,25vw,45rem);
 padding: .5rem;
 justify-content: center;
 align-items: center;

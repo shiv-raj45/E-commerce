@@ -20,6 +20,7 @@ background-attachment: fixed;
     border-radius: 0 0 50% 50% ;
 }
 .account_avatar{
+    text-transform: capitalize !important;
     position: relative;
     top: 1.3rem;
     padding: .7rem !important;

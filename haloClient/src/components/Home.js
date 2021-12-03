@@ -45,9 +45,7 @@ function Home() {
 
   return (
     <div className="home">
-      {/* <Category/> */}
       <div className="home_banner">
-        <img src={deco2} className="deco_2" />
 
         <div className="banner_text_section">
           <div className="banner_text_upper_button">
