@@ -24,18 +24,17 @@ function Home() {
       axios
         .get("http://localhost:2000/products")
         .then((response) => {
-          console.log(response.data);
           setAvailableProduct(response.data);
+          setLoading(false);
+
         })
         .catch((err) => console.log(err))
         .finally(() => {
-          setLoading(false);
-          dispatch({ type: "LOAD_PRODUCTS", payload: availableProduct });
         });
     };
 
     getproducts();
-  }, [availableProduct,dispatch]);
+  }, []);
 
   return (
     <div className="home">

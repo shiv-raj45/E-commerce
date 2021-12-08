@@ -9,7 +9,6 @@ const orderDate=new Date().toDateString()
 const allProducts=productdetails.map(product=>{
   return [product.productName,product.rating,product.price, orderDate,userId,product.productId]
 });
-console.log(allProducts);
 const sql = `INSERT INTO orders  (productName,rating,price,orderdate,userId,productId) values ?`;
 
     connection.query(sql,[allProducts], (error,response) => {

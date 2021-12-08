@@ -34,10 +34,9 @@ function ProductDetails() {
             (el) => el.id !== Number(id)
           );
           setRecommended(filteredrecommend);
+          console.log(recommended);
         })
         .catch((error) => console.log(error))
-        .finally(() => {
-        });
     };
     if (id) fetchDetails();
   }, [id, state.id,setWishlitStatus]);

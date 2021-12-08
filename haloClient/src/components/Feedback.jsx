@@ -48,7 +48,7 @@ function Feedback({ userId, productId, setClientFeedback, clientFeedback }) {
           ))}
     </div>
 
-        <textarea resize={false} className="feedback_input"
+        <textarea  className="feedback_input"
           onChange={(e) => setFeedbackText(e.target.value)}
           value={feedbackText}
         />
